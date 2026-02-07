@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع بسيط</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="img/png" href="logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fef3c7 0%, #fef08a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+        }
+
+        /* زر الرجوع للخلف */
+        .back-button {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f59e0b 0%, #ca8a04 100%);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        }
+
+        /* اللوجو */
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #f59e0b 0%, #ca8a04 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 3rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* النصوص الرئيسية */
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #78350f;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 2rem;
+        }
+
+        /* الفاصل */
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #f59e0b 0%, #ca8a04 100%);
+            margin: 2rem auto;
+        }
+
+        /* النصوص الإضافية */
+        .description {
+            color: #b45309;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* الزر الرئيسي */
+        .instagram-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 1rem 2rem;
+            margin-top: 3rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #ca8a04 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: 'Tajawal', 'Poppins', sans-serif;
+        }
+
+        .instagram-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        }
+
+        .instagram-button:active {
+            transform: scale(0.98);
+        }
+
+        /* أيقونة الإنستغرام */
+        .instagram-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* استجابة الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .back-button {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .instagram-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- زر الرجوع للخلف -->
+        <a href="linktree.html" class="back-button" title="الرجوع للخلف">←</a>
+
+
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <!-- اللوجو -->
+        <div class="logo">
+            <img src="noBglogo.png" style="   width: 100px;
+            height: 100px;" alt="Naz_parfum">
+        </div>
+
+        <!-- النص الرئيسي بالعربية -->
+        <h1>يتم التعديل على الموقع</h1>
+
+        <!-- النص الرئيسي بالتركية -->
+        <p class="subtitle">Site Güncelleniyor</p>
+
+        <!-- الفاصل -->
+        <div class="divider"></div>
+
+        <!-- النصوص الإضافية -->
+        <p class="description">
+            نحن نعمل على تحسين الموقع لتقديم أفضل تجربة لك
+        </p>
+        <p class="description">
+            Daha iyi bir deneyim sunmak için çalışıyoruz
+        </p>
+
+        <!-- زر الإنستغرام -->
+        <a href="https://instagram.com/parfum.naz" target="_blank" rel="noopener noreferrer" class="instagram-button">
+            <svg class="instagram-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+            </svg>
+            <span>بإمكانك أن تشاهد أقوى العروض</span>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        // يمكن إضافة تأثيرات إضافية هنا
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('الموقع تم تحميله بنجاح');
+        });
+    </script>
+</body>
+</html>
